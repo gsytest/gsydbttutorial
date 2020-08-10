@@ -1,0 +1,12 @@
+version: 2
+models:
+  - name: citytest
+    description: One record per citytest
+    columns:
+      - name: name
+        description: NULL when a customer has not yet placed an order.
+        tests:
+          - unique
+          - not_null
+          - accepted_values:
+              values: ['San Francisco','shanghai','San','Xian','Sixhuang','yongf']
